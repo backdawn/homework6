@@ -63,16 +63,13 @@ body{
 }
 input{
   padding: 2px;
-  width: 50%;
+  width: 300px;
   border: 1px solid #dadce0;
   border-left: none;
   border-top: none;
   border-right: none;
 }
-input:focus ~ .in-input{
-  opacity: 0;
-}
-.in-input{
+input[type="search"] { 
   font-family: Roboto,Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -80,15 +77,18 @@ input:focus ~ .in-input{
   line-height: 20px;
   color: #70757a;
   font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-  max-width: 100%;
   overflow: hidden;
   pointer-events: none;
-  position: absolute;
   text-overflow: ellipsis;
-  top: 2px;
-  left: 0;
   white-space: nowrap;
+  }
+input[type="search"]::-webkit-input-placeholder {
+  color: #70757a;
+} 
+input[type="search"]::-moz-placeholder {
+  color: #70757a;
 }
+
 .block{
   display: flex;
   -webkit-box-flex: 1;
